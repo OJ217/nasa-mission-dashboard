@@ -1,0 +1,31 @@
+{
+  "name": "nasa-mission-dashboard",
+  "version": "1.0.0",
+  "description": "NASA-MISSION-DASHBOARD-PROJECT",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+
+    "server": "npm run watch --prefix server",
+    "client": "npm run start --prefix client",
+
+    "watch": "npm run server & npm run client",
+    "watch-cluster": "npm run cluster --prefix server & npm run client",
+
+    "test": "npm run test --prefix server && npm run test --prefix client",
+    "test-server": "npm run test --prefix server",
+    "test-client": "npm run test --prefix client",
+
+    "deploy": "npm run build --prefix client && npm run start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server"
+  },
+  "keywords": [
+    "NASA",
+    "EXOPLANETS",
+    "DASHBOARD-PROJECT"
+  ],
+  "author": "Ochirjav Jargalsaikhan",
+  "license": "MIT"
+}
