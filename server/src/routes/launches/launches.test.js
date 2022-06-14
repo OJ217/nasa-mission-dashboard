@@ -1,15 +1,19 @@
 const request = require("supertest");
 const app = require("../../app");
-const { connectDB, disconnectDB } = require("../../config/mongoDbConnection");
+const { connectDB, disconnectDB, clearDB } = require("../../config/testConfig")
 
 describe("Launches API", () => {
     beforeAll(async () => {
         await connectDB();
     });
 
+    afterEach(async () => {
+        await clearDB();
+    });
+
     afterAll(async () => {
         await disconnectDB();
-    })
+    });
 
     describe("Test GET /api/v1/launches", ()=>{
         test("status code is 200 and content-type includes json format", async () => { 

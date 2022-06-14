@@ -1,5 +1,5 @@
 {
-  "name": "nasa-fe",
+  "name": "nasa-mission-dashboard-client",
   "version": "1.0.1",
   "private": true,
   "dependencies": {

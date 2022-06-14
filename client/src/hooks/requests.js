@@ -4,10 +4,6 @@ async function httpGetPlanets() {
   return await( await fetch(`${API_URL}/planets`)).json();
 }
 
-async function httpGetLaunchesCount() {
-  return await( await fetch(`${API_URL}/launches/pagination-count`)).json();
-}
-
 async function httpGetLaunches() {
   const fetchedLaunches = await( await fetch(`${API_URL}/launches`)).json();
   return fetchedLaunches.sort((launchA, launchB) => {

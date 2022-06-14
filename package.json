@@ -16,10 +16,7 @@
 
     "test": "npm run test --prefix server && npm run test --prefix client",
     "test-server": "npm run test --prefix server",
-    "test-client": "npm run test --prefix client",
-
-    "deploy": "npm run build --prefix client && npm run start --prefix server",
-    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server"
+    "test-client": "npm run test --prefix client"
   },
   "keywords": [
     "NASA",
