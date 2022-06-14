@@ -9,14 +9,12 @@ const mongod = createServer();
 
 async function connectDB() {
     await mongoose.connect((await mongod).getUri());
-    console.log("connectDB");
 }
 
 async function disconnectDB() {
     await mongoose.connection.dropDatabase();
     await mongoose.connection.close();
     (await mongod).stop()
-    console.log("disconnectDB");
 }
 
 async function clearDB() {
